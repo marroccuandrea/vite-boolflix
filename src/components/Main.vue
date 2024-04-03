@@ -1,39 +1,47 @@
 <script>
-    import {store} from '../data/store'
-    import Card from './partials/Card.vue'
-    export default {  
-        components: {
-            Card
-        },
-    data(){
-      return{
-        store
-      }
+import { store } from '../data/store'
+import Card from './partials/Card.vue'
+export default {
+  components: {
+    Card
+  },
+  data() {
+    return {
+      store
     }
-    
   }
+
+}
 </script>
 
 <template>
   <main>
-      <div class="container pt-5">
-        <div class="row row-cols-4">
-          <div class="col">
-            <Card v-for="card in this.store.moviesList" :key="card.id"  :title="card.title" :original_title="card.original_title" :image="card.poster_path"/>
-          </div>
-          
-
-        </div>
+    <div class="container pt-5">
+      <h1>Movies</h1>
+      <div class="row row-cols-4">
+        <Card v-for="card in this.store.moviesList" :key="card.id" :title="card.title"
+          :original_title="card.original_title" :original_language="card.original_language"
+          :vote_average="card.vote_average" />
 
       </div>
-    </main>
+    </div>
+    <div class="container pt-5">
+      <h1>TV Series</h1>
+      <div class="row row-cols-4">
+        <Card v-for="serie in this.store.seriesList" :key="serie.id" :title="serie.name"
+          :original_title="serie.original_name" :original_language="serie.original_language"
+          :vote_average="serie.vote_average" />
+
+      </div>
+    </div>
+  </main>
 
 </template>
 
 
 <style lang="scss" scoped>
-main{
-  height: 100vh;
+main {
+  height: 100%;
   background-color: gray;
 }
 </style>
