@@ -19,29 +19,9 @@
       <div class="container pt-5">
         <div class="row row-cols-4">
           <div class="col">
-            <Card/>
+            <Card v-for="card in this.store.moviesList" :key="card.id"  :title="card.title" :original_title="card.original_title" :image="card.poster_path"/>
           </div>
-          <div class="col">
-            <Card/>
-          </div>
-          <div class="col">
-            <Card/>
-          </div>
-          <div class="col">
-            <Card/>
-          </div>
-          <div class="col">
-            <Card/>
-          </div>
-          <div class="col">
-            <Card/>
-          </div>
-          <div class="col">
-            <Card/>
-          </div>
-          <div class="col">
-            <Card/>
-          </div>
+          
 
         </div>
 

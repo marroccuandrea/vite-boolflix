@@ -3,7 +3,17 @@
     export default {  
     data(){
       return{
-        store
+        store,
+        titleSearch: '',
+        seriesTitleSearch: ''
+      }
+    },
+    methods:{
+      startSearch(){
+        console.log('ricerca');
+        this.store.queryParams.query = this.titleSearch;
+        this.$emit('startSearch');
+        console.log(this.store.queryParams.query);
       }
     }
     
@@ -16,7 +26,7 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <h2 class="logo">BOOLFLIX</h2>
       <div class="input-box">
-        <input class="form-control mx-3" type="text">
+        <input v-model.trim="titleSearch" @keyup.enter="startSearch" class="form-control mx-3" type="text">
         <button class="btn btn-danger d-flex align-items-center">Cerca</button>
       </div>
     </div>
