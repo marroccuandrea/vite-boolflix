@@ -15,8 +15,37 @@
 </script>
 
 <template>
-    <main>
+  <main>
+      <div class="container pt-5">
+        <div class="row row-cols-4">
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
+          <div class="col">
+            <Card/>
+          </div>
 
+        </div>
+
+      </div>
     </main>
 
 </template>
