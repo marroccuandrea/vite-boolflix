@@ -15,13 +15,16 @@
 </script>
 
 <template>
-    <div>
+    <main>
 
-    </div>
+    </main>
 
 </template>
 
 
 <style lang="scss" scoped>
-
+main{
+  height: 100vh;
+  background-color: gray;
+}
 </style>

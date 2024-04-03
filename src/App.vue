@@ -17,9 +17,8 @@
 </script>
 
 <template>
-  <div>
-
-  </div>
+  <Header />
+  <Main />
 </template>
 
 <style lang="scss">
