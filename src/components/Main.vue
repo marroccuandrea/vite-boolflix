@@ -43,5 +43,10 @@ export default {
 main {
   height: 100%;
   background-color: gray;
+
+  h1 {
+    color: red;
+    text-shadow: 1px 1px 1px black;
+  }
 }
 </style>

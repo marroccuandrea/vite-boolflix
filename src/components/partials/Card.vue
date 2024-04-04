@@ -54,8 +54,8 @@ export default {
                 </div>
                 <div class="flip-card-back">
                     <div class="card-body">
-                        <h5 class="card-title">Titolo originale: {{ original_title }}</h5>
-                        <h5 class="card-title">Titolo: {{ title }}</h5>
+                        <h5 class="card-title fs-6">Titolo originale: {{ original_title }}</h5>
+                        <h5 class="card-title fs-6">Titolo: {{ title }}</h5>
                         <img v-if="original_language == 'it'" src="../../assets/bandiere/it.png"></img>
                         <img v-else-if="original_language == 'en'" src="../../assets/bandiere/en.png"></img>
                         <p v-else class="card-text">{{ original_language }}</p>
@@ -76,11 +76,11 @@ export default {
 <style lang="scss" scoped>
 .card-body {
     .card-star {
-        color: rgb(255, 230, 0);
+        color: rgb(255, 196, 0);
     }
 
     .text-description {
-        height: 250px;
+        height: 245px;
         overflow-y: scroll;
     }
 
@@ -89,6 +89,10 @@ export default {
         height: 15px;
 
     }
+}
+
+.card-text-scroll {
+    font-size: 0.9rem;
 }
 
 
