@@ -21,7 +21,7 @@ export default {
       <div class="row row-cols-4">
         <Card v-for="card in this.store.moviesList" :key="card.id" :title="card.title"
           :original_title="card.original_title" :original_language="card.original_language"
-          :vote_average="card.vote_average" />
+          :vote_average="card.vote_average" :poster_path="card.poster_path" />
 
       </div>
     </div>
@@ -30,7 +30,7 @@ export default {
       <div class="row row-cols-4">
         <Card v-for="serie in this.store.seriesList" :key="serie.id" :title="serie.name"
           :original_title="serie.original_name" :original_language="serie.original_language"
-          :vote_average="serie.vote_average" />
+          :vote_average="serie.vote_average" :poster_path="serie.poster_path" />
 
       </div>
     </div>
