@@ -26,15 +26,13 @@ export default {
                 star += `<i class="fa-solid fa-star"></i>`;
                 // Mezza stella
             }
-            if (mezzaStella) {
-                star += `<i class="fa-regular fa-star-half-stroke"></i>`
-            }
+            // if (mezzaStella) {
+            //     star += `<i class="fa-regular fa-star-half-stroke"></i>`
+            // }
 
             // Stelle vuote
-            const stellaVuota = 5;
-            for (let i = 0; i < stelle; i++) {
-
-            } if (stellaVuota) {
+            const stellaVuota = 5 - stelle;
+            for (let i = 0; i < stellaVuota; i++) {
                 star += `<i class="fa-regular fa-star"></i>`;
             }
             return star;
