@@ -23,7 +23,9 @@ export default {
             <div class="card-body">
                 <h5 class="card-title">{{ original_title }}</h5>
                 <h5 class="card-title">{{ title }}</h5>
-                <p class="card-text">{{ original_language }}</p>
+                <img v-if="original_language == 'it'" src="../../assets/bandiere/it.png"></img>
+                <img v-else-if="original_language == 'en'" src="../../assets/bandiere/en.png"></img>
+                <p v-else class="card-text">{{ original_language }}</p>
                 <p class="card-text">{{ vote_average }}</p>
             </div>
         </div>
@@ -32,4 +34,11 @@ export default {
 
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card-body {
+    img {
+        width: 25px;
+        height: 15px;
+    }
+}
+</style>

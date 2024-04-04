@@ -9,6 +9,7 @@ export const store = reactive({
     seriesList: [],
     queryParams: {
         api_key: '22a1005abcd5268fa491114e2d41ca28',
-        query: ''
+        query: '',
+        language: 'it-IT'
     }
 })
