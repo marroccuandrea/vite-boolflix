@@ -41,7 +41,8 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
   background-color: gray;
 
   h1 {
