@@ -48,8 +48,7 @@ export default {
         <div class="card card mb-5">
 
             <div class="card-front">
-                <img class="image-null w-100 h-100" v-if="poster_path === null"
-                    src="../../assets/img/cover19-650x390.jpg">
+                <img class="image-null" v-if="poster_path === null" src="../../assets/img/cover19-650x390.jpg">
                 <img v-else :src="`https://image.tmdb.org/t/p/w342${poster_path}`" class="card-img-top">
             </div>
 
@@ -75,17 +74,25 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-    background-color: transparent;
+    background-color: grey;
     width: 300px;
     height: 450px;
+    border-radius: 10px;
 
     &:hover {
-        transform: translateY(30px);
-        transition: transform 0.8s;
+        transform: translateY(20px);
+        transition: transform 0.6s;
+
     }
 
     .card-front {
         position: absolute;
+
+        img {
+            width: 300px;
+            height: 448px;
+            border-radius: 10px;
+        }
     }
 
 
@@ -95,6 +102,10 @@ export default {
         color: white;
         background-color: rgba(0, 0, 0, 0.602);
         opacity: 0;
+        border-radius: 10px;
+        width: 300px;
+        height: 450px;
+
 
 
 
@@ -103,9 +114,9 @@ export default {
         }
 
         .text-description {
-            height: 245px;
+            height: 240px;
             overflow-y: scroll;
-            scrollbar-color: rgb(255, 196, 0);
+
 
             .card-text-scroll {
                 font-size: 0.9rem;
@@ -116,11 +127,11 @@ export default {
         img {
             width: 25px;
             height: 15px;
-
         }
 
         &:hover {
             opacity: 1;
+            transition: 0.6s;
         }
     }
 
