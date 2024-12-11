@@ -1,17 +1,16 @@
 <script>
-import { store } from '../data/store'
-import Card from './partials/Card.vue'
+import { store } from "../data/store";
+import Card from "./partials/Card.vue";
 export default {
   components: {
-    Card
+    Card,
   },
   data() {
     return {
-      store
-    }
-  }
-
-}
+      store,
+    };
+  },
+};
 </script>
 
 <template>
@@ -19,31 +18,41 @@ export default {
     <div class="container pt-5">
       <h1>Movies</h1>
       <div class="row row-cols-4">
-        <Card v-for="card in this.store.moviesList" :key="card.id" :title="card.title"
-          :original_title="card.original_title" :original_language="card.original_language"
-          :vote_average="card.vote_average" :poster_path="card.poster_path" :overview="card.overview" />
-
+        <Card
+          v-for="card in this.store.moviesList"
+          :key="card.id"
+          :title="card.title"
+          :original_title="card.original_title"
+          :original_language="card.original_language"
+          :vote_average="card.vote_average"
+          :poster_path="card.poster_path"
+          :overview="card.overview"
+        />
       </div>
     </div>
     <div class="container pt-5">
       <h1>TV Series</h1>
       <div class="row row-cols-4">
-        <Card v-for="serie in this.store.seriesList" :key="serie.id" :title="serie.name"
-          :original_title="serie.original_name" :original_language="serie.original_language"
-          :vote_average="serie.vote_average" :poster_path="serie.poster_path" :overview="serie.overview" />
-
+        <Card
+          v-for="serie in this.store.seriesList"
+          :key="serie.id"
+          :title="serie.name"
+          :original_title="serie.original_name"
+          :original_language="serie.original_language"
+          :vote_average="serie.vote_average"
+          :poster_path="serie.poster_path"
+          :overview="serie.overview"
+        />
       </div>
     </div>
   </main>
-
 </template>
-
 
 <style lang="scss" scoped>
 main {
   height: 100vh;
   overflow-y: scroll;
-  background-color: gray;
+  background-color: rgb(82, 81, 81);
 
   h1 {
     color: red;
