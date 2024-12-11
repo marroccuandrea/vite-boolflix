@@ -14,6 +14,9 @@ export default {
       this.store.queryParams.query = this.titleSearch, this.seriesTitleSearch
       this.$emit('startSearch');
       console.log(this.store.queryParams.query);
+    },
+    reloadPage(){
+      window.location.reload();
     }
   }
 
@@ -24,7 +27,9 @@ export default {
   <header>
 
     <div class="container-fluid d-flex justify-content-between align-items-center">
-      <img src="../assets/img/boolflix-logo.png" class="logo"></img>
+      <div class="logo" @click="reloadPage">
+        <img src="../assets/img/boolflix-logo.png" class="logo"></img>
+      </div>
       <div class="input-box">
         <input v-model.trim="titleSearch" class="form-control mx-3" type="text" placeholder="Cerca il film"
           @keyup.enter="startSearch">
@@ -50,6 +55,7 @@ export default {
   .logo {
     width: 200px;
     height: 50px;
+    cursor: pointer;
   }
 }
 </style>
