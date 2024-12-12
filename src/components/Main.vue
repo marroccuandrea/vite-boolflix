@@ -17,7 +17,7 @@ export default {
   <main>
     <div class="container pt-5">
       <h1>Movies</h1>
-      <div class="row row-cols-4">
+      <div class="row row-cols-auto">
         <Card
           v-for="card in this.store.moviesList"
           :key="card.id"
@@ -32,7 +32,7 @@ export default {
     </div>
     <div class="container pt-5">
       <h1>TV Series</h1>
-      <div class="row row-cols-4">
+      <div class="row row-cols-auto">
         <Card
           v-for="serie in this.store.seriesList"
           :key="serie.id"
@@ -57,6 +57,9 @@ main {
   h1 {
     color: red;
     text-shadow: 1px 1px 1px black;
+  }
+  .row-cols-auto {
+    margin: 0 auto;
   }
 }
 </style>

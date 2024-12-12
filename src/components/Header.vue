@@ -49,13 +49,21 @@ export default {
 
   .input-box {
     display: flex;
-    height: 25%;
+    height: 30%;
+    .btn {
+      padding: 10px 20px;
+    }
   }
 
   .logo {
     width: 200px;
     height: 50px;
     cursor: pointer;
+  }
+}
+@media (max-width: 425px ){
+  .form-control{
+    display: none;
   }
 }
 </style>
